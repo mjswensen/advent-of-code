@@ -1,5 +1,4 @@
-import { parseIntegers, splitLines } from '../../utils.mjs';
-import { solution } from '../../utils.mjs';
+import { parseIntegers, splitLines, solution } from '../../utils.mjs';
 
 solution(
   import.meta.url,
