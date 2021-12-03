@@ -55,18 +55,6 @@ async function getInput(programUrl) {
   return await readFile(inputFilePath, 'utf-8');
 }
 
-// TODO
-async function submitAnswer(programUrl, actual) {
-  const { year, day } = getPathData(programUrl);
-  return await fetch(`https://adventofcode.com/${year}/day/${day}/answer`, {
-    method: 'POST',
-    headers: {
-      Cookie: `session=${process.env.SESSION}`,
-    },
-    body: actual,
-  });
-}
-
 export async function solution(
   programUrl,
   exampleInput,
