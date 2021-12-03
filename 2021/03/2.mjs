@@ -4,7 +4,11 @@ function mostCommon(bits) {
   let count0 = 0;
   let count1 = 0;
   bits.forEach((bit) => (bit === '1' ? count1++ : count0++));
-  return count1 === count0 ? null : count1 > count0 ? '1' : '0';
+  return count0 > count1 ? '0' : '1';
+}
+
+function opposite(bit) {
+  return bit === '1' ? '0' : '1';
 }
 
 solution(
@@ -30,15 +34,7 @@ solution(
   (lines) => {
     function filter(arr, i, most) {
       const mcap = mostCommon(arr.map((num) => num[i]));
-      const compare = most
-        ? mcap === null
-          ? '1'
-          : mcap
-        : mcap === null
-        ? '0'
-        : mcap === '1'
-        ? '0'
-        : '1';
+      const compare = most ? mcap : opposite(mcap);
       const next = arr.filter((num) => num[i] === compare);
       if (next.length === 1) {
         return next[0];
