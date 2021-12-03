@@ -34,10 +34,10 @@ async function getInput(programUrl) {
   const inputFilePath = join(dir, 'input.txt');
   try {
     await stat(inputFilePath);
-    console.log(`File ${inputFilePath} found`);
+    console.log(`Input file found (${inputFilePath})`);
   } catch (e) {
     if (e.code === 'ENOENT') {
-      console.log(`File ${inputFilePath} not found, fetching`);
+      console.log(`Downloading puzzle input to ${inputFilePath}`);
       const response = await fetch(
         `https://adventofcode.com/${year}/day/${day}/input`,
         {
