@@ -1,4 +1,4 @@
-import { splitLines, solution } from '../../utils.mjs';
+import { splitLines, solution } from '../../utils.js';
 
 function mostCommon(bits) {
   let count0 = 0;
