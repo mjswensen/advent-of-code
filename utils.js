@@ -64,7 +64,9 @@ export async function solution(
   const exampleActual = solutionFunctions
     .reduce((prev, fn) => fn(prev), exampleInput.trim())
     .toString();
-  strictEqual(exampleActual.trim(), exampleExpected.trim());
+  const ee = exampleExpected.trim();
+  const ea = exampleActual.trim();
+  strictEqual(ea, ee, `Got ${ea} (expected ${ee})`);
   console.log('Test passed for example input');
 
   const input = await getInput(programUrl);
