@@ -1,4 +1,4 @@
-import { solution, splitLines } from '../../utils.js';
+import { solution, splitLines } from '../utils.js';
 import { range } from 'lodash-es';
 
 solution(

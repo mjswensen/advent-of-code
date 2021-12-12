@@ -1,4 +1,4 @@
-import { readInputLines } from '../../utils.js';
+import { readInputLines } from '../utils.js';
 
 const lines = await readInputLines(import.meta.url);
 

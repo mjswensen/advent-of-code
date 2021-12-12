@@ -1,4 +1,4 @@
-import { solution } from '../../utils.js';
+import { solution } from '../utils.js';
 import { zip } from 'lodash-es';
 
 function getSolutionSets(board) {

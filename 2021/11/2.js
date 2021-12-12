@@ -1,4 +1,4 @@
-import { parseIndividualIntegers, solution, splitLines } from '../../utils.js';
+import { parseIndividualIntegers, solution, splitLines } from '../utils.js';
 
 await solution(
   import.meta.url,

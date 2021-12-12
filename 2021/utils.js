@@ -5,7 +5,7 @@ import { strictEqual } from 'node:assert/strict';
 import { config } from 'dotenv';
 import fetch from 'node-fetch';
 
-config();
+config({ path: join(process.cwd(), '2021', '.env') });
 
 function inputPath(programUrl) {
   return format({
@@ -25,12 +25,11 @@ export async function readInputLines(programUrl) {
 function getPathData(programUrl) {
   const dir = dirname(fileURLToPath(programUrl));
   const day = parseInt(basename(dir), 10).toString();
-  const year = basename(dirname(dir));
-  return { year, day, dir };
+  return { day, dir };
 }
 
 async function getInput(programUrl) {
-  const { year, day, dir } = getPathData(programUrl);
+  const { day, dir } = getPathData(programUrl);
   const inputFilePath = join(dir, 'input.txt');
   try {
     await stat(inputFilePath);
@@ -39,7 +38,7 @@ async function getInput(programUrl) {
     if (e.code === 'ENOENT') {
       console.log(`Downloading puzzle input to ${inputFilePath}`);
       const response = await fetch(
-        `https://adventofcode.com/${year}/day/${day}/input`,
+        `https://adventofcode.com/2021/day/${day}/input`,
         {
           headers: {
             Cookie: `session=${process.env.SESSION}`,

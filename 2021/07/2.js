@@ -1,5 +1,5 @@
 import { range } from 'lodash-es';
-import { solution } from '../../utils.js';
+import { solution } from '../utils.js';
 
 await solution(
   import.meta.url,

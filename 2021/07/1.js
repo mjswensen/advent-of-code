@@ -1,4 +1,4 @@
-import { solution } from '../../utils.js';
+import { solution } from '../utils.js';
 
 await solution(
   import.meta.url,
