@@ -84,3 +84,7 @@ export function splitLines(trimmedInput) {
 export function parseIntegers(lines) {
   return lines.map((line) => parseInt(line, 10));
 }
+
+export function parseIndividualIntegers(lines) {
+  return lines.map((line) => line.split('').map((s) => parseInt(s, 10)));
+}
