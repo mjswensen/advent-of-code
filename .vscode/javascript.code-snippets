@@ -1,0 +1,26 @@
+{
+  "Solution Bootstrap": {
+    "prefix": "bootstrap",
+    "body": [
+      "import { solution, splitLines } from '../../utils.js';",
+      "",
+      "await solution(",
+      "  import.meta.url,",
+      "  `",
+      "",
+      "$0",
+      "",
+      "  `,",
+      "  '',",
+      "  splitLines,",
+      "  (lines) => {},",
+      ");",
+      "",
+      "/*",
+      "",
+      "*/",
+      ""
+    ],
+    "description": "Initial code for puzzle solutions."
+  }
+}
