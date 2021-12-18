@@ -26,6 +26,11 @@ formdata-polyfill@^4.0.10:
   dependencies:
     fetch-blob "^3.1.2"
 
+heapq@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/heapq/-/heapq-0.0.3.tgz#70a3e7b911e29a7938bad2ca1d4a68fe4f887ea9"
+  integrity sha1-cKPnuRHimnk4utLKHUpo/k+Ifqk=
+
 lodash-es@^4.17.21:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
